@@ -6,6 +6,15 @@
     <button class="btn btn-danger"
             (click)="onEndGame()"
     >End Game</button>
-    <div>{{ counter }}</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-6">
+    <h3>Odd Numeros</h3>
+    <app-odd *ngFor="let oddNumber of oddArray" [oddNumber]="oddNumber"></app-odd>
+  </div>
+  <div class="col-xs-6">
+    <h3>Even Numeros</h3>
+    <app-even *ngFor="let evenNumber of evenArray" [evenNumber]="evenNumber"></app-even>
   </div>
 </div>

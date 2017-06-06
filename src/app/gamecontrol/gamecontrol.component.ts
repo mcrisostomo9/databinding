@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamecontrolComponent implements OnInit {
   counter: number = 0;
+  oddArray: number[] = [];
+  evenArray: number[] = [];
+
   interval;
 
   constructor() { }
@@ -14,8 +17,13 @@ export class GamecontrolComponent implements OnInit {
   ngOnInit() {
   }
 
+  incrementCounter(){
+    this.counter++;
+    (this.counter % 2 === 0) ? this.evenArray.push(this.counter) : this.oddArray.push(this.counter);
+  }
+
   onStartGame(){
-    this.interval = setInterval(() => this.counter++, 1000);
+    this.interval = setInterval(() => this.incrementCounter(), 1000);
   }
 
   onEndGame(){
