@@ -1,6 +1,11 @@
 <div class="row">
   <div class="col-xs-12">
-    <button class="btn btn-success">Start Game</button>
-    <button class="btn btn-danger">End Game</button>
+    <button class="btn btn-success"
+            (click)="onStartGame()"
+    >Start Game</button>
+    <button class="btn btn-danger"
+            (click)="onEndGame()"
+    >End Game</button>
+    <div>{{ counter }}</div>
   </div>
 </div>
