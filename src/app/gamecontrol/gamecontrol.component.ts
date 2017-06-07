@@ -26,8 +26,15 @@ export class GamecontrolComponent implements OnInit {
     this.interval = setInterval(() => this.incrementCounter(), 1000);
   }
 
+  onPauseGame(){
+    clearInterval(this.interval);
+  }
+
   onEndGame(){
     clearInterval(this.interval);
+    this.counter = 0;
+    this.oddArray = [];
+    this.evenArray =[]
   }
 
 }
